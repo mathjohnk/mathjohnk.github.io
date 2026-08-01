@@ -195,8 +195,8 @@ main{
 }
 
 body[data-page="notes"] .page-hero h1{
-  font-size:clamp(1.75rem,3vw,2.45rem);
-  white-space:normal;
+  font-size:clamp(1.55rem,2.7vw,2.25rem);
+  white-space:nowrap;
 }
 
 .content-panel{
