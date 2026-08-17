@@ -567,3 +567,40 @@ body[data-page="papers"]::before{
   body[data-page="papers"]::after{opacity:.36;}
   body[data-page="papers"]::before{opacity:.045;}
 }
+
+/* =========================================================
+   PAPERS PAGE — dark blue exterior + white publication panel
+   ========================================================= */
+body[data-page="papers"] .publication-panel{
+  background:rgba(255,255,255,.96);
+  border:1px solid rgba(105,183,201,.30);
+  border-top:3px solid rgba(105,183,201,.78);
+  box-shadow:0 18px 45px rgba(0,0,0,.24);
+  backdrop-filter:blur(4px);
+}
+body[data-page="papers"] .publication-list{
+  color:#26333e;
+}
+body[data-page="papers"] .publication-list li{
+  border-bottom:1px solid #d8e1e8;
+}
+body[data-page="papers"] .publication-list li::marker{
+  color:#3f8fa3;
+}
+body[data-page="papers"] .publication-list b em{
+  color:#152535;
+}
+body[data-page="papers"] .publication-list em{
+  color:#3d4c59;
+}
+body[data-page="papers"] .publication-list a{
+  color:#286b9b;
+}
+body[data-page="papers"] .publication-list a:hover{
+  color:#174e76;
+}
+@media(max-width:820px){
+  body[data-page="papers"] .publication-panel{
+    background:rgba(255,255,255,.97);
+  }
+}
