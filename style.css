@@ -308,3 +308,262 @@ body[data-page="notes"]{
 body[data-page="notes"] .content-panel{
   border-top:4px solid #7f9b8b;
 }
+
+/* =========================================================
+   PAPERS PAGE — DARK FRACTAL REDESIGN
+   ========================================================= */
+
+body[data-page="papers"]{
+  --bg:#07152c;
+  --panel:rgba(9,27,54,.72);
+  --header:rgba(6,18,38,.90);
+  --text:#e8edf4;
+  --heading:#f4f1e8;
+  --muted:#b4c1d0;
+  --link:#79b7ff;
+  --accent:#c9a24a;
+  --on-accent:#07152c;
+  --soft:rgba(255,255,255,.07);
+  --border:rgba(180,205,230,.16);
+  --border-strong:rgba(201,162,74,.38);
+
+  position:relative;
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 50% 18%, rgba(22,63,118,.28), transparent 42%),
+    linear-gradient(180deg,#07152c 0%,#081a36 48%,#061327 100%) !important;
+  color:var(--text);
+}
+
+/* Fractal image layer */
+body[data-page="papers"]::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:url("papers-fractal-background.png");
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:cover;
+  opacity:.43;
+  mix-blend-mode:screen;
+}
+
+/* Ensure page content stays above the background art */
+body[data-page="papers"] .site-header,
+body[data-page="papers"] main,
+body[data-page="papers"] .site-footer{
+  position:relative;
+  z-index:1;
+}
+
+/* Header */
+body[data-page="papers"] .site-header{
+  background:rgba(6,18,38,.82);
+  border-bottom:1px solid rgba(210,224,240,.15);
+  box-shadow:0 8px 28px rgba(0,0,0,.12);
+}
+
+body[data-page="papers"] .site-name{
+  color:#f5f1e8;
+}
+
+body[data-page="papers"] .site-nav a{
+  color:#cbd5e2;
+}
+
+body[data-page="papers"] .site-nav a:hover,
+body[data-page="papers"] .site-nav a:focus-visible{
+  background:rgba(255,255,255,.075);
+  color:#fff;
+}
+
+/* Active Papers button: muted gold rather than bright pill */
+body[data-page="papers"] .site-nav [data-page="papers"]{
+  background:rgba(201,162,74,.14);
+  color:#e4c16d;
+  box-shadow:inset 0 0 0 1px rgba(201,162,74,.24);
+}
+
+/* Hero */
+body[data-page="papers"] .page-hero{
+  padding-left:1.25rem;
+  border-left:3px solid rgba(201,162,74,.72);
+}
+
+body[data-page="papers"] .page-hero .eyebrow{
+  color:#d8b65f;
+}
+
+body[data-page="papers"] .page-hero h1{
+  color:#f5f1e8;
+  text-shadow:0 2px 18px rgba(0,0,0,.22);
+}
+
+/* Publications panel */
+body[data-page="papers"] .content-panel{
+  background:linear-gradient(
+    180deg,
+    rgba(8,26,52,.72),
+    rgba(7,22,45,.78)
+  );
+  border:1px solid rgba(178,203,226,.14);
+  border-top:3px solid rgba(201,162,74,.55);
+  box-shadow:
+    0 18px 45px rgba(0,0,0,.22),
+    inset 0 1px 0 rgba(255,255,255,.03);
+  backdrop-filter:blur(4px);
+}
+
+/* Publication list */
+body[data-page="papers"] .publication-list{
+  color:#e6ebf2;
+}
+
+body[data-page="papers"] .publication-list li{
+  border-bottom:1px solid rgba(185,206,228,.12);
+}
+
+body[data-page="papers"] .publication-list li::marker{
+  color:#d8b65f;
+  font-weight:700;
+}
+
+body[data-page="papers"] .publication-list b em{
+  color:#f6f2e9;
+  font-weight:700;
+}
+
+body[data-page="papers"] .publication-list em{
+  color:#d7dee8;
+}
+
+body[data-page="papers"] .publication-list a{
+  color:#7db9ff;
+}
+
+body[data-page="papers"] .publication-list a:hover{
+  color:#b7d6ff;
+}
+
+/* Footer */
+body[data-page="papers"] .site-footer{
+  color:#9fb0c3;
+  border-top:1px solid rgba(181,203,226,.15);
+}
+
+/* Mobile: keep the art but reduce competition with text */
+@media(max-width:820px){
+  body[data-page="papers"]::after{
+    position:absolute;
+    background-size:auto 100%;
+    opacity:.30;
+  }
+
+  body[data-page="papers"] .content-panel{
+    background:rgba(7,23,47,.86);
+    backdrop-filter:blur(2px);
+  }
+}
+
+@media(max-width:480px){
+  body[data-page="papers"]::after{
+    opacity:.22;
+  }
+}
+
+/* =========================================================
+   PAPERS PAGE — COOL ACCENT + STRONGER FRACTAL
+   ========================================================= */
+body[data-page="papers"]{
+  --accent:#69b7c9;
+  --on-accent:#061327;
+  --border-strong:rgba(105,183,201,.40);
+}
+
+body[data-page="papers"]::after{
+  opacity:.60;
+}
+
+body[data-page="papers"] .site-nav [data-page="papers"]{
+  background:rgba(105,183,201,.14);
+  color:#8fd5e3;
+  box-shadow:inset 0 0 0 1px rgba(105,183,201,.28);
+}
+
+body[data-page="papers"] .page-hero{
+  border-left-color:rgba(105,183,201,.78);
+}
+
+body[data-page="papers"] .page-hero .eyebrow{
+  color:#8fd5e3;
+}
+
+body[data-page="papers"] .content-panel{
+  border-top-color:rgba(105,183,201,.62);
+  background:linear-gradient(
+    180deg,
+    rgba(8,26,52,.66),
+    rgba(7,22,45,.72)
+  );
+}
+
+body[data-page="papers"] .publication-list li::marker{
+  color:#8fd5e3;
+}
+
+@media(max-width:820px){
+  body[data-page="papers"]::after{opacity:.45;}
+}
+
+@media(max-width:480px){
+  body[data-page="papers"]::after{opacity:.34;}
+}
+
+
+/* =========================================================
+   PAPERS PAGE — requested final tuning (2026-08-16)
+   - publication rectangle 10% narrower, typography unchanged
+   - both fractals slightly more visible
+   - right fractal receives a subtle additional lift
+   ========================================================= */
+@media (min-width:821px){
+  body[data-page="papers"] .publication-panel{
+    width:90%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+/* Slight overall lift: affects both left and right fractals. */
+body[data-page="papers"]::after{
+  opacity:.64;
+}
+
+/* A restrained second pass on the right half only, making it richer
+   without changing the source artwork or competing with the papers. */
+body[data-page="papers"]::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  pointer-events:none;
+  background-image:url("papers-fractal-background.png");
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:cover;
+  opacity:.08;
+  mix-blend-mode:screen;
+  clip-path:inset(0 0 0 50%);
+}
+
+@media(max-width:820px){
+  body[data-page="papers"]::after{opacity:.48;}
+  body[data-page="papers"]::before{position:absolute;opacity:.06;}
+}
+
+@media(max-width:480px){
+  body[data-page="papers"]::after{opacity:.36;}
+  body[data-page="papers"]::before{opacity:.045;}
+}
